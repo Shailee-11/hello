@@ -1,25 +1,43 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './loginPage/Header';
+import Footer from './loginPage/Footer';
+import LoginSection from './loginPage/LoginSection';
+import ContactForm from './E-kycForm/ContactForm';
+import KycLogin from './E-kyc/KycLogin';
+import Status from './Status/Status';
 
-function App() {
+
+
+
+// App component
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<LoginSection />} />
+          <Route path="/contact" element={<ContactForm />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter> */}
+      <Header/>
+      <LoginSection/>
+      <Footer/>
+      <Header/>
+      <ContactForm/>
+      <Footer/>
+      <Header/>
+      <KycLogin/>
+      <Footer/>
+      <Status/>
+      <Footer/>
+
     </div>
   );
-}
+};
 
 export default App;
